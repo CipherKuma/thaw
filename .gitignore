@@ -1,0 +1,62 @@
+# Rust
+**/target/
+Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Odra
+.odra/
+wasm/
+
+# Build artifacts
+*.wasm
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Test coverage
+*.profraw
+*.profdata
+coverage/
+
+# Node
+node_modules/
+pnpm-lock.yaml
+
+# Next.js
+.next/
+out/
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Keys and Secrets (NEVER commit these!)
+keys/
+*.pem
+*.key
+secret_key*
+*_secret_key*
+*.secret
+
+# Wallet files
+wallet.json
+*.wallet
+
+# Lock files (npm - using pnpm)
+package-lock.json
+
+# Submission form
+gformsubmission.md
