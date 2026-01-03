@@ -1,0 +1,58 @@
+[package]
+name = "thaw"
+version = "0.1.0"
+edition = "2021"
+authors = ["Thaw Protocol"]
+description = "Liquid staking protocol for Casper Network"
+license = "MIT"
+
+[dependencies]
+odra = { version = "2.4.0", features = [], default-features = false }
+odra-modules = { version = "2.4.0", features = [], default-features = false }
+odra-casper-livenet-env = { version = "2.4.0", optional = true }
+
+[dev-dependencies]
+odra-test = { version = "2.4.0", features = [], default-features = false }
+
+[build-dependencies]
+odra-build = { version = "2.4.0" }
+
+[features]
+default = []
+livenet = ["odra-casper-livenet-env"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "thaw_build_contract"
+path = "bin/build_contract.rs"
+test = false
+
+[[bin]]
+name = "thaw_build_schema"
+path = "bin/build_schema.rs"
+test = false
+
+[[bin]]
+name = "deploy_livenet"
+path = "bin/deploy_livenet.rs"
+required-features = ["livenet"]
+
+[[bin]]
+name = "test_deployed"
+path = "bin/test_deployed.rs"
+required-features = ["livenet"]
+
+[[bin]]
+name = "deploy_thcspr"
+path = "bin/deploy_thcspr.rs"
+required-features = ["livenet"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+
+[profile.dev.package."*"]
+opt-level = 3
