@@ -1,0 +1,13 @@
+[[contracts]]
+fqn = "thaw::ThCsprToken"
+
+[[contracts]]
+fqn = "thaw::ThawCore"
+
+[[contracts]]
+fqn = "thaw::LendingPool"
+
+[livenet]
+chain_name = "casper-test"
+node_address = "https://node.testnet.casper.network/rpc"
+secret_key_path = "../keys/test_secret_key.pem"
