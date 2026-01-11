@@ -9,8 +9,8 @@ import { Globe, Check, ChevronDown } from "lucide-react";
 type Network = keyof typeof NETWORK_CONFIG;
 
 const networkLabels: Record<Network, { name: string; color: string; disabled?: boolean }> = {
-  localnet: { name: "Localnet", color: "text-purple-500" },
-  testnet: { name: "Testnet", color: "text-yellow-500", disabled: true },
+  localnet: { name: "Localnet", color: "text-purple-500", disabled: true },
+  testnet: { name: "Testnet", color: "text-yellow-500" },
   mainnet: { name: "Mainnet", color: "text-green-500", disabled: true },
 };
 
